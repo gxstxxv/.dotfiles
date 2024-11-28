@@ -1,0 +1,4 @@
+options.theme = "asciimono"
+TableSheet.unbindkey('y')
+TableSheet.bindkey('y', 'syscopy-cell')
+

@@ -1,0 +1,38 @@
+theme = "gruber-darker"
+
+[editor]
+line-number = "relative"
+mouse = false
+scrolloff = 7
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer"]
+idle-timeout = 0
+completion-trigger-len = 1
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.lsp]
+display-messages = true
+
+[keys.normal]
+G = "goto_file_end"
+esc = ["collapse_selection", "keep_primary_selection"]
+s = "change_selection"
+S = ["extend_line_above", "change_selection"]
+c = "select_regex"
+C = "split_selection"
+v = ["move_char_left", "move_char_right", "select_mode"]
+x = "select_line_below"
+X = "select_line_above"
+0 = "goto_first_nonwhitespace"
+f = "goto_word"
+K = "hover"
+
+[keys.select]
+s = "change_selection"
+
+[keys.normal.space]
+f = "file_picker_in_current_directory"
+F = "file_picker"
+ 
