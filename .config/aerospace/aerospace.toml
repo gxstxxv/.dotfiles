@@ -38,24 +38,24 @@ run = 'layout floating'
 
 [mode.main.binding]
 
-alt-enter = '''exec-and-forget osascript -e '
-tell application "iTerm"
-  create window with default profile
-end tell' 
-'''
+# alt-enter = '''exec-and-forget osascript -e '
+# tell application "iTerm"
+#   create window with default profile
+# end tell' 
+# '''
+#
+# alt-shift-enter = '''exec-and-forget osascript -e '
+# tell application "iTerm"
+#   create window with profile "floating gruper"
+# end tell' 
+# '''
 
-alt-shift-enter = '''exec-and-forget osascript -e '
-tell application "iTerm"
-  create window with profile "floating gruper"
-end tell' 
-'''
-
-alt-d = '''exec-and-forget osascript -e '
-tell application "Dictionary"
-    launch
-    activate
-end tell'
-'''
+# alt-d = '''exec-and-forget osascript -e '
+# tell application "Dictionary"
+#     launch
+#     activate
+# end tell'
+# '''
 
 ctrl-h = 'focus --boundaries-action wrap-around-the-workspace left'
 ctrl-j = 'focus --boundaries-action wrap-around-the-workspace down'
