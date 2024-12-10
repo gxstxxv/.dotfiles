@@ -3,11 +3,6 @@ return {
     "AstroNvim/astrocore",
     opts = {
       mappings = {
-        i = {
-          -- markdown --
-          ["<tab>"] = { "<esc><cmd>BulletDemote<cr>a" },
-          ["<s-tab>"] = { "<esc><cmd>BulletPromote<cr>a" },
-        },
         n = {
           -- switch buffer/tabs --
           ["H"] = { "<cmd>bprevious<cr>", desc = "Buffer Previous" },
@@ -38,16 +33,11 @@ return {
 
           -- markdown commands --
           ["<Leader>m"] = { desc = "Markdown" },
-          ["<Leader>mc"] = { "<cmd>ObsidianToggleCheckbox<cr>", desc = "Toggle Checkbox" },
-          ["<Leader>mf"] = { "<cmd>ObsidianQuickSwitch<cr>", desc = "Search Files" },
-          ["<Leader>ms"] = { "<cmd>ObsidianSearch<cr>", desc = "Search Words" },
-          ["<Leader>mt"] = { "<cmd>ObsidianTags<cr>", desc = "Search Tags" },
-          ["<Leader>mn"] = { "<cmd>ObsidianNew<cr>", desc = "New Note" },
-          ["<Leader>mw"] = { "<cmd>ObsidianWorkspace<cr>", desc = "Change Workspace" },
           ["<Leader>mp"] = {
             ":! pandoc -H ~/.config/pandoc/header.tex -V geometry:margin=1in -o ",
             desc = "Markdown to Pdf",
           },
+          ["<Leader>mt"] = { ":! rg TODO ~/Documents/Studium/Semester_3/<cr>", desc = "Search TODOS" },
           ["<tab>"] = { "<esc><cmd>BulletDemote<cr>" },
           ["<s-tab>"] = { "<esc><cmd>BulletPromote<cr>" },
 

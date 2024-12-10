@@ -13,6 +13,7 @@ return {
         Pmenu = { bg = "#181818" },
         TabLineFill = { bg = "#181818" },
         WildMenu = { bg = "#181818" },
+        Cursor = { bg = "#e4e4e4" },
       },
     },
   },

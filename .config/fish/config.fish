@@ -6,4 +6,5 @@ if status is-interactive
     bind \cy 'yy; commandline -f repaint'
     bind \cg 'history_search; commandline -f repaint'
     export EDITOR=nvim
+    set -x PATH (bash -c 'eval "$(/usr/libexec/path_helper)"; echo $PATH' | tr ':' '\n')
 end
