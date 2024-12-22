@@ -45,6 +45,27 @@ tell application "Dictionary"
 end tell'
 '''
 
+alt-p = '''exec-and-forget osascript -e '
+tell application "KeePassXC"
+    launch
+    activate
+end tell'
+'''
+
+alt-m = '''exec-and-forget osascript -e '
+tell application "Stickies"
+    launch
+    activate
+end tell'
+'''
+
+alt-g = '''exec-and-forget osascript -e '
+tell application "GitHub Desktop"
+    launch
+    activate
+end tell'
+'''
+
 ctrl-h = 'focus --boundaries-action wrap-around-the-workspace left'
 ctrl-j = 'focus --boundaries-action wrap-around-the-workspace down'
 ctrl-k = 'focus --boundaries-action wrap-around-the-workspace up'

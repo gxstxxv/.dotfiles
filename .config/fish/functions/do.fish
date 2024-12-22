@@ -1,3 +1,0 @@
-function do
-  dooit
-end

@@ -37,7 +37,7 @@ return {
             ":! pandoc -H ~/.config/pandoc/header.tex -V geometry:margin=1in -o ",
             desc = "Markdown to Pdf",
           },
-          ["<Leader>mt"] = { ":! rg TODO ~/Documents/Studium/Semester_3/<cr>", desc = "Search TODOS" },
+          ["<Leader>mt"] = { ":! rg -n TODO ~/Documents/Studium/Semester_3/<cr>", desc = "Search TODOS" },
           ["<tab>"] = { "<esc><cmd>BulletDemote<cr>" },
           ["<s-tab>"] = { "<esc><cmd>BulletPromote<cr>" },
 
