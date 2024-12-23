@@ -1,21 +1,36 @@
-- kitty
-- tmux
-- i3wm/dwm
-- dmenu
-- feh
-- sioyek
-- dooit
-- nvim/helix
-- fzf
+## Formulae
+
 - bat
 - fd
 - fish
-- ripgrep
-- yazi/nnn
-- visidata
-- font-iosevka
-- font-0xproto-nerd-font
-- tex
+- fzf
+- helix
+- go
+- maven
+- neovim
+- node
+- openjdk
 - pandoc
-- nyxt
-- dict
+- python
+- r
+- ripgrep
+- tmux
+- visidata
+- yazi
+
+## Casks
+
+- aerospace
+- basictex
+- font-0xproto-nerd-font
+- font-iosevka
+- keepassxc
+- kitty
+- signal
+- sioyek
+- spotify
+
+## Others
+
+- vieb
+- github-desktop
