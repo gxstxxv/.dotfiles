@@ -1,6 +1,7 @@
 ## Formulae
 
 - bat
+- tree
 - fd
 - fish
 - fzf
@@ -21,10 +22,12 @@
 ## Casks
 
 - aerospace
+- discord
 - basictex
 - font-0xproto-nerd-font
 - font-iosevka
 - keepassxc
+- mactex-no-gui
 - kitty
 - signal
 - sioyek
