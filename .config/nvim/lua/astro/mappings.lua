@@ -11,12 +11,6 @@ return {
           -- redo --
           ["U"] = { "<C-r>" },
 
-          -- change split focus --
-          ["ª"] = { "<C-w>h" },
-          ["@"] = { "<C-w>l" },
-          ["∆"] = { "<C-w>k" },
-          ["º"] = { "<C-w>j" },
-
           -- open terminal new buffer --
           ["<C-t>"] = { "<cmd>te<cr>" },
 
@@ -37,7 +31,7 @@ return {
             ":! pandoc -H ~/.config/pandoc/header.tex -V geometry:margin=1in -o ",
             desc = "Markdown to Pdf",
           },
-          ["<Leader>mt"] = { ":! rg -n TODO ~/Documents/Studium/Semester_3/<cr>", desc = "Search TODOS" },
+          ["<Leader>mt"] = { "i<!-- TODO: --><esc>bhi ", desc = "Add TODO" },
           ["<tab>"] = { "<esc><cmd>BulletDemote<cr>" },
           ["<s-tab>"] = { "<esc><cmd>BulletPromote<cr>" },
 
