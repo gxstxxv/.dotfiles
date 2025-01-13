@@ -21,6 +21,26 @@ check-further-callbacks = true
 run = 'layout floating'
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'Maps'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Find My'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Voice Memos'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Discord'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'Preview'
 check-further-callbacks = true
 run = 'layout floating'
@@ -30,13 +50,29 @@ if.app-name-regex-substring = 'Finder'
 check-further-callbacks = true
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'Passwords'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Messages'
+check-further-callbacks = true
+run = 'layout floating'
+
 [workspace-to-monitor-force-assignment]
-7 = 'secondary'
-8 = 'secondary'
 9 = 'secondary'
 10 = 'secondary'
+11 = 'secondary'
 
 [mode.main.binding]
+
+alt-c = '''exec-and-forget osascript -e '
+tell application "Discord"
+    launch
+    activate
+end tell'
+'''
 
 alt-d = '''exec-and-forget osascript -e '
 tell application "Dictionary"
@@ -88,10 +124,11 @@ ctrl-i = 'workspace 3'
 ctrl-o = 'workspace 4'
 ctrl-p = 'workspace 5'
 ctrl-0 = 'workspace 6'
-ctrl-6 = 'workspace 7'
-ctrl-7 = 'workspace 8'
-ctrl-8 = 'workspace 9'
-ctrl-9 = 'workspace 10'
+alt-tab = 'workspace 7'
+ctrl-6 = 'workspace 8'
+ctrl-7 = 'workspace 9'
+ctrl-8 = 'workspace 10'
+ctrl-9 = 'workspace 11'
 
 ctrl-shift-y = 'move-node-to-workspace 1'
 ctrl-shift-u = 'move-node-to-workspace 2'
@@ -99,10 +136,11 @@ ctrl-shift-i = 'move-node-to-workspace 3'
 ctrl-shift-o = 'move-node-to-workspace 4'
 ctrl-shift-p = 'move-node-to-workspace 5'
 ctrl-shift-0 = 'move-node-to-workspace 6'
-ctrl-shift-6 = 'move-node-to-workspace 7'
-ctrl-shift-7 = 'move-node-to-workspace 8'
-ctrl-shift-8 = 'move-node-to-workspace 9'
-ctrl-shift-9 = 'move-node-to-workspace 10'
+alt-shift-tab = 'move-node-to-workspace 7'
+ctrl-shift-6 = 'move-node-to-workspace 8'
+ctrl-shift-7 = 'move-node-to-workspace 9'
+ctrl-shift-8 = 'move-node-to-workspace 10'
+ctrl-shift-9 = 'move-node-to-workspace 11'
 
 ctrl-shift-c = 'reload-config'
 
