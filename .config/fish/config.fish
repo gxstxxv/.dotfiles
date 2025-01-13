@@ -7,4 +7,7 @@ if status is-interactive
     bind \cg 'history_search; commandline -f repaint'
     export EDITOR=nvim
     set -x PATH (bash -c 'eval "$(/usr/libexec/path_helper)"; echo $PATH' | tr ':' '\n')
+    if not set -q TMUX
+        tmux
+    end
 end
