@@ -1,4 +1,11 @@
-options.theme = "asciimono"
 TableSheet.unbindkey('y')
 TableSheet.bindkey('y', 'syscopy-cell')
 
+TableSheet.unbindkey('f')
+TableSheet.bindkey('f', 'search-cols')
+
+TableSheet.unbindkey('Tab')
+TableSheet.bindkey('Tab', 'jump-prev')
+
+TableSheet.unbindkey('Space')
+TableSheet.bindkey('Space', 'syscopy-cell')

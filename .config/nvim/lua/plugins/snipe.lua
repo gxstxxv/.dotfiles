@@ -4,5 +4,15 @@ return {
   keys = {
     { "J", function() require("snipe").open_buffer_menu() end, desc = "Open Snipe buffer menu" },
   },
-  opts = {},
+  opts = {
+    ui = {
+      preselect_current = true,
+    },
+    hints = {
+      dictionary = "sadfewcmpghio",
+    },
+    navigate = {
+      under_cursor = "l",
+    },
+  },
 }

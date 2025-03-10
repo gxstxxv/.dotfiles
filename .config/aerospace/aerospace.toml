@@ -60,7 +60,13 @@ if.app-name-regex-substring = 'Messages'
 check-further-callbacks = true
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'Simulator'
+check-further-callbacks = true
+run = 'layout floating'
+
 [workspace-to-monitor-force-assignment]
+8 = 'secondary'
 9 = 'secondary'
 10 = 'secondary'
 11 = 'secondary'
@@ -114,7 +120,7 @@ ctrl-shift-l = 'move right'
 
 ctrl-shift-m = 'fullscreen'
 
-ctrl-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
+ctrl-e = 'balance-sizes' # 'layout toggle split' in i3
 
 ctrl-alt-k = 'layout floating tiling' # 'floating toggle' in i3
 
