@@ -1,16 +1,34 @@
+---@type LazySpec
 return {
   "AstroNvim/astrolsp",
+  ---@type AstroLSPOpts
   opts = {
     features = {
-      codelens = true, -- enable/disable codelens refresh on start
-      inlay_hints = false, -- enable/disable inlay hints on start
-      semantic_tokens = true, -- enable/disable semantic token highlighting
+      codelens = true,
+      inlay_hints = true,
+      semantic_tokens = true,
     },
     formatting = {
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
+        enabled = true,
+        allow_filetypes = {
+          -- "go",
+        },
+        ignore_filetypes = {
+          -- "python",
+        },
       },
-      timeout_ms = 1000, -- default format timeout
+      disabled = {
+        -- "lua_ls",
+      },
+      timeout_ms = 1000,
+    },
+    servers = {
+      -- "pyright"
+    },
+    ---@diagnostic disable: missing-fields
+    config = {
+      -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
     },
   },
 }

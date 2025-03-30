@@ -1,9 +1,11 @@
+---@type LazySpec
 return {
   "AstroNvim/astroui",
+  ---@type AstroUIOpts
   opts = {
     colorscheme = "gruber-darker",
     highlights = {
-      init = { -- this table overrides highlights in all themes
+      init = {
         Normal = { bg = "#181818" },
         StatusLine = { bg = "#181818" },
         SignColumn = { bg = "#181818" },
@@ -15,6 +17,18 @@ return {
         WildMenu = { bg = "#181818" },
         Cursor = { bg = "#e4e4e4" },
       },
+    },
+    icons = {
+      LSPLoading1 = "⠋",
+      LSPLoading2 = "⠙",
+      LSPLoading3 = "⠹",
+      LSPLoading4 = "⠸",
+      LSPLoading5 = "⠼",
+      LSPLoading6 = "⠴",
+      LSPLoading7 = "⠦",
+      LSPLoading8 = "⠧",
+      LSPLoading9 = "⠇",
+      LSPLoading10 = "⠏",
     },
   },
 }
