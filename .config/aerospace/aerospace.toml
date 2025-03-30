@@ -1,7 +1,6 @@
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
-# Mouse follows focus when focused monitor changes
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center'] 
 
@@ -127,9 +126,9 @@ ctrl-shift-l = 'move right'
 
 ctrl-shift-m = 'fullscreen'
 
-ctrl-e = 'balance-sizes' # 'layout toggle split' in i3
+ctrl-e = 'balance-sizes' 
 
-ctrl-alt-k = 'layout floating tiling' # 'floating toggle' in i3
+ctrl-alt-k = 'layout floating tiling' 
 
 ctrl-y = 'workspace 1'
 ctrl-u = 'workspace 2'
