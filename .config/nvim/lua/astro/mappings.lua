@@ -44,9 +44,19 @@ return {
           ["gpD"] = { "<cmd>lua require('goto-preview').goto_preview_declaration()<CR>", desc = "Declaration" },
           ["gP"] = { "<cmd>lua require('goto-preview').close_all_win()<CR>", desc = "Close All" },
           ["gpr"] = { "<cmd>lua require('goto-preview').goto_preview_references()<CR>", desc = "References" },
+
+          -- marks --
+          ["m"] = { "ma", desc = "Mark position (a)" },
+          ["M"] = { "`a", desc = "Jump position (a)" },
+          ["<C-m>"] = { "`'", desc = "Jump previous position" },
         },
 
         v = {
+          -- marks --
+          ["m"] = { "ma", desc = "Mark position (a)" },
+          ["M"] = { "`a", desc = "Jump position (a)" },
+          ["<C-m>"] = { "`'", desc = "Jump previous position" },
+
           -- mini.surround --
           ["<Leader>s"] = { desc = "Surround" },
 
