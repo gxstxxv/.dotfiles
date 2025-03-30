@@ -108,6 +108,13 @@ tell application "GitHub Desktop"
 end tell'
 '''
 
+alt-b = '''exec-and-forget osascript -e '
+tell application "Vieb"
+    launch
+    activate
+end tell'
+'''
+
 ctrl-h = 'focus --boundaries-action wrap-around-the-workspace left'
 ctrl-j = 'focus --boundaries-action wrap-around-the-workspace down'
 ctrl-k = 'focus --boundaries-action wrap-around-the-workspace up'
