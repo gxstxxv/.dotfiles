@@ -1,0 +1,4 @@
+[[manager.prepend_keymap]]
+on = "<Tab>"
+run = "cd --interactive"
+desc = "Jump interactivly"
