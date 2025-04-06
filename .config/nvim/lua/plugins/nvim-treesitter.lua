@@ -30,6 +30,7 @@ return {
       "bash",
       "c",
       "fish",
+      "make",
     },
     highlight = {
       enable = true,
