@@ -45,6 +45,11 @@ check-further-callbacks = true
 run = 'layout floating'
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'Dictionary'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'Finder'
 check-further-callbacks = true
 run = 'layout floating'
