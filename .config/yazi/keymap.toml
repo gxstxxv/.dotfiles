@@ -2,3 +2,40 @@
 on = "<Tab>"
 run = "cd --interactive"
 desc = "Jump interactivly"
+
+[[manager.prepend_keymap]]
+on = "s"
+run = "plugin fzf"
+desc = "fzf"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "D" ]
+run  = "cd ~/Documents/"
+desc = "Cd to Documents"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "C" ]
+run  = "cd ~/Documents/Code/"
+desc = "Cd to Code"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "s" ]
+run  = "cd ~/Documents/Studium/Semester_4/"
+desc = "Cd to Studium"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "S" ]
+run  = "cd ~/Documents/Screenshots/"
+desc = "Cd to Screenshots"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "t" ]
+run  = "cd ~/.Trash/"
+desc = "Cd to Trash"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "w" ]
+run  = "cd ~/Library/Mobile\\ Documents/com~apple~CloudDocs/Work/"
+desc = "Cd to Work"
+
+
