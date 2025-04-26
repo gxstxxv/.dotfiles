@@ -3,6 +3,9 @@ return {
     "AstroNvim/astrocore",
     opts = {
       mappings = {
+        t = {
+          ["<Esc>"] = { "<C-\\><C-n>", desc = "Leave Terminal Mode" },
+        },
         n = {
           -- redo --
           ["U"] = { "<C-r>" },
@@ -11,7 +14,6 @@ return {
           ["<C-a>"] = { "ggVG", desc = "Mark All" },
 
           -- telescope files --
-          ["<Leader>e"] = { "<cmd>Telescope file_browser<cr><esc>", desc = "File Browser" },
           ["<Leader><Leader>"] = { "<cmd>Telescope find_files<cr>", desc = "Find Files" },
 
           -- zen --
@@ -26,6 +28,25 @@ return {
           ["<Leader>mt"] = { "i<!-- TODO: --><esc>bhi ", desc = "Add TODO" },
           ["<tab>"] = { "<esc><cmd>BulletDemote<cr>" },
           ["<s-tab>"] = { "<esc><cmd>BulletPromote<cr>" },
+          ["<Leader>mc"] = {
+            function()
+              local line = vim.api.nvim_get_current_line()
+
+              local checkbox_start, checkbox_end = line:find "%[[ xX]%]"
+
+              if checkbox_start and checkbox_end then
+                local current_box = line:sub(checkbox_start + 1, checkbox_start + 1)
+                local new_char = (current_box == "x" or current_box == "X") and " " or "x"
+
+                local new_line = line:sub(1, checkbox_start) .. new_char .. line:sub(checkbox_end)
+                vim.api.nvim_set_current_line(new_line)
+              else
+                print "No Checkbox found!"
+              end
+            end,
+            desc = "Checkbox Done",
+          },
+          ["<Leader>ma"] = { "i**Frage**:<cr><cr>**Antwort**:<cr><esc>kkO", desc = "New Anki Question" },
 
           -- latex commands --
           ["<Leader>L"] = { desc = "LaTeX" },
@@ -44,19 +65,9 @@ return {
           ["gpD"] = { "<cmd>lua require('goto-preview').goto_preview_declaration()<CR>", desc = "Declaration" },
           ["gP"] = { "<cmd>lua require('goto-preview').close_all_win()<CR>", desc = "Close All" },
           ["gpr"] = { "<cmd>lua require('goto-preview').goto_preview_references()<CR>", desc = "References" },
-
-          -- marks --
-          ["m"] = { "ma", desc = "Mark position (a)" },
-          ["M"] = { "`a", desc = "Jump position (a)" },
-          ["<C-m>"] = { "`'", desc = "Jump previous position" },
         },
 
         v = {
-          -- marks --
-          ["m"] = { "ma", desc = "Mark position (a)" },
-          ["M"] = { "`a", desc = "Jump position (a)" },
-          ["<C-m>"] = { "`'", desc = "Jump previous position" },
-
           -- mini.surround --
           ["<Leader>s"] = { desc = "Surround" },
 
