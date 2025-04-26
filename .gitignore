@@ -2,3 +2,4 @@
 .config/tmux/plugins/tmux-tilish/
 .config/tmux/plugins/tmux-navigate/
 .config/tmux/plugins/minimal-tmux-status/
+.config/tmux/plugins/tmux-jump/
