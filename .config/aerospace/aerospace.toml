@@ -1,3 +1,5 @@
+start-at-login = true
+
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
@@ -5,176 +7,167 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center'] 
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'SourceLauncher'
-check-further-callbacks = true
-run = 'layout floating'
+    if.app-name-regex-substring = 'SourceLauncher'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [[on-window-detected]]
-if.window-title-regex-substring = 'Floating Gruper'
-check-further-callbacks = true
-run = 'layout floating'
+    if.window-title-regex-substring = 'Floating Gruper'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'java'
-check-further-callbacks = true
-run = 'layout floating'
+    if.app-name-regex-substring = 'java'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Maps'
-check-further-callbacks = true
-run = 'layout floating'
+    if.app-name-regex-substring = 'Maps'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Find My'
-check-further-callbacks = true
-run = 'layout floating'
+    if.app-name-regex-substring = 'Find My'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Voice Memos'
-check-further-callbacks = true
-run = 'layout floating'
+    if.app-name-regex-substring = 'Voice Memos'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Discord'
-check-further-callbacks = true
-run = 'layout floating'
+    if.app-name-regex-substring = 'Preview'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Preview'
-check-further-callbacks = true
-run = 'layout floating'
+    if.app-name-regex-substring = 'Dictionary'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Dictionary'
-check-further-callbacks = true
-run = 'layout floating'
+    if.app-name-regex-substring = 'Finder'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Finder'
-check-further-callbacks = true
-run = 'layout floating'
+    if.app-name-regex-substring = 'Passwords'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Passwords'
-check-further-callbacks = true
-run = 'layout floating'
+    if.app-name-regex-substring = 'Messages'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Messages'
-check-further-callbacks = true
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'Simulator'
-check-further-callbacks = true
-run = 'layout floating'
+    if.app-name-regex-substring = 'Simulator'
+    check-further-callbacks = true
+    run = 'layout floating'
 
 [workspace-to-monitor-force-assignment]
-8 = 'secondary'
-9 = 'secondary'
-10 = 'secondary'
-11 = 'secondary'
+    8 = 'secondary'
+    9 = 'secondary'
+    10 = 'secondary'
+    11 = 'secondary'
 
 [mode.main.binding]
+    alt-t = '''exec-and-forget open -na "kitty"'''
+    alt-c = '''exec-and-forget osascript -e '
+    tell application "Discord"
+        launch
+        activate
+    end tell'
+    '''
+    alt-d = '''exec-and-forget osascript -e '
+    tell application "Dictionary"
+        launch
+        activate
+    end tell'
+    '''
+    alt-p = '''exec-and-forget osascript -e '
+    tell application "KeePassXC"
+        launch
+        activate
+    end tell'
+    '''
+    alt-m = '''exec-and-forget osascript -e '
+    tell application "Stickies"
+        launch
+        activate
+    end tell'
+    '''
+    alt-g = '''exec-and-forget osascript -e '
+    tell application "GitHub Desktop"
+        launch
+        activate
+    end tell'
+    '''
+    alt-b = '''exec-and-forget osascript -e '
+    tell application "Vieb"
+        launch
+        activate
+    end tell'
+    '''
 
-alt-c = '''exec-and-forget osascript -e '
-tell application "Discord"
-    launch
-    activate
-end tell'
-'''
+    ctrl-h = 'focus --boundaries-action wrap-around-the-workspace left'
+    ctrl-j = 'focus --boundaries-action wrap-around-the-workspace down'
+    ctrl-k = 'focus --boundaries-action wrap-around-the-workspace up'
+    ctrl-l = 'focus --boundaries-action wrap-around-the-workspace right'
 
-alt-d = '''exec-and-forget osascript -e '
-tell application "Dictionary"
-    launch
-    activate
-end tell'
-'''
+    ctrl-shift-h = 'move left'
+    ctrl-shift-j = 'move down'
+    ctrl-shift-k = 'move up'
+    ctrl-shift-l = 'move right'
 
-alt-p = '''exec-and-forget osascript -e '
-tell application "KeePassXC"
-    launch
-    activate
-end tell'
-'''
+    ctrl-shift-m = 'fullscreen'
 
-alt-m = '''exec-and-forget osascript -e '
-tell application "Stickies"
-    launch
-    activate
-end tell'
-'''
+    ctrl-e = 'balance-sizes' 
 
-alt-g = '''exec-and-forget osascript -e '
-tell application "GitHub Desktop"
-    launch
-    activate
-end tell'
-'''
+    ctrl-alt-k = 'layout floating tiling' 
 
-alt-b = '''exec-and-forget osascript -e '
-tell application "Vieb"
-    launch
-    activate
-end tell'
-'''
+    ctrl-y = 'workspace 1'
+    ctrl-u = 'workspace 2'
+    ctrl-i = 'workspace 3'
+    ctrl-o = 'workspace 4'
+    ctrl-p = 'workspace 5'
+    ctrl-0 = 'workspace 6'
+    alt-tab = 'workspace 7'
+    ctrl-6 = 'workspace 8'
+    ctrl-7 = 'workspace 9'
+    ctrl-8 = 'workspace 10'
+    ctrl-9 = 'workspace 11'
 
-ctrl-h = 'focus --boundaries-action wrap-around-the-workspace left'
-ctrl-j = 'focus --boundaries-action wrap-around-the-workspace down'
-ctrl-k = 'focus --boundaries-action wrap-around-the-workspace up'
-ctrl-l = 'focus --boundaries-action wrap-around-the-workspace right'
+    ctrl-shift-y = 'move-node-to-workspace 1'
+    ctrl-shift-u = 'move-node-to-workspace 2'
+    ctrl-shift-i = 'move-node-to-workspace 3'
+    ctrl-shift-o = 'move-node-to-workspace 4'
+    ctrl-shift-p = 'move-node-to-workspace 5'
+    ctrl-shift-0 = 'move-node-to-workspace 6'
+    alt-shift-tab = 'move-node-to-workspace 7'
+    ctrl-shift-6 = 'move-node-to-workspace 8'
+    ctrl-shift-7 = 'move-node-to-workspace 9'
+    ctrl-shift-8 = 'move-node-to-workspace 10'
+    ctrl-shift-9 = 'move-node-to-workspace 11'
 
-ctrl-shift-h = 'move left'
-ctrl-shift-j = 'move down'
-ctrl-shift-k = 'move up'
-ctrl-shift-l = 'move right'
+    ctrl-shift-c = 'reload-config'
 
-ctrl-shift-m = 'fullscreen'
-
-ctrl-e = 'balance-sizes' 
-
-ctrl-alt-k = 'layout floating tiling' 
-
-ctrl-y = 'workspace 1'
-ctrl-u = 'workspace 2'
-ctrl-i = 'workspace 3'
-ctrl-o = 'workspace 4'
-ctrl-p = 'workspace 5'
-ctrl-0 = 'workspace 6'
-alt-tab = 'workspace 7'
-ctrl-6 = 'workspace 8'
-ctrl-7 = 'workspace 9'
-ctrl-8 = 'workspace 10'
-ctrl-9 = 'workspace 11'
-
-ctrl-shift-y = 'move-node-to-workspace 1'
-ctrl-shift-u = 'move-node-to-workspace 2'
-ctrl-shift-i = 'move-node-to-workspace 3'
-ctrl-shift-o = 'move-node-to-workspace 4'
-ctrl-shift-p = 'move-node-to-workspace 5'
-ctrl-shift-0 = 'move-node-to-workspace 6'
-alt-shift-tab = 'move-node-to-workspace 7'
-ctrl-shift-6 = 'move-node-to-workspace 8'
-ctrl-shift-7 = 'move-node-to-workspace 9'
-ctrl-shift-8 = 'move-node-to-workspace 10'
-ctrl-shift-9 = 'move-node-to-workspace 11'
-
-ctrl-shift-c = 'reload-config'
-
-ctrl-r = 'mode resize'
+    ctrl-r = 'mode resize'
+    alt-shift-semicolon = 'mode service'
 
 [mode.resize.binding]
-h = 'resize width -50'
-j = 'resize height +50'
-k = 'resize height -50'
-l = 'resize width +50'
-enter = 'mode main'
-esc = 'mode main'
+    h = 'resize width -50'
+    j = 'resize height +50'
+    k = 'resize height -50'
+    l = 'resize width +50'
+    enter = 'mode main'
+    esc = 'mode main'
 
 [gaps]
-inner.horizontal = 7
-inner.vertical =   7
-outer.left =       7
-outer.bottom =     7
-outer.top =        7
-outer.right =      7
+    inner.horizontal = 7
+    inner.vertical =   7
+    outer.left =       7
+    outer.bottom =     7
+    outer.top =        7
+    outer.right =      7
