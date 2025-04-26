@@ -9,7 +9,7 @@ return {
       preselect_current = true,
     },
     hints = {
-      dictionary = "sadfewcmpghio",
+      dictionary = "sadfewcmpgio",
     },
     navigate = {
       under_cursor = "l",
