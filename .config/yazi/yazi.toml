@@ -1,2 +1,7 @@
 [manager]
 show_hidden = false 
+
+[[open.prepend_rules]]
+mime = "application/pdf"
+use = "open"
+exec = "sioyek"
