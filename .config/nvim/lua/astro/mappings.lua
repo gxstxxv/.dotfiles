@@ -65,6 +65,9 @@ return {
           ["gpD"] = { "<cmd>lua require('goto-preview').goto_preview_declaration()<CR>", desc = "Declaration" },
           ["gP"] = { "<cmd>lua require('goto-preview').close_all_win()<CR>", desc = "Close All" },
           ["gpr"] = { "<cmd>lua require('goto-preview').goto_preview_references()<CR>", desc = "References" },
+
+          -- floating notes --
+          ["N"] = { "<cmd>Td<CR>", desc = "Floating Notes" },
         },
 
         v = {
