@@ -3,8 +3,8 @@ start-at-login = true
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-on-focus-changed = ['move-mouse window-lazy-center'] 
+on-focused-monitor-changed = ['move-mouse window-lazy-center']
+on-focus-changed = ['move-mouse window-lazy-center '] 
 
 [[on-window-detected]]
     if.app-name-regex-substring = 'SourceLauncher'
@@ -105,7 +105,7 @@ on-focus-changed = ['move-mouse window-lazy-center']
     end tell'
     '''
     alt-b = '''exec-and-forget osascript -e '
-    tell application "Vieb"
+    tell application "Orion"
         launch
         activate
     end tell'
