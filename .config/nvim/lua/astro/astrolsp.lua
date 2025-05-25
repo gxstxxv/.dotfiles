@@ -23,12 +23,22 @@ return {
       },
       timeout_ms = 1000,
     },
-    servers = {
-      -- "pyright"
-    },
+    servers = {},
     ---@diagnostic disable: missing-fields
     config = {
-      -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      basedpyright = {
+        handlers = {
+          ["textDocument/publishDiagnostics"] = function(_, result, ctx, config)
+            if result and result.diagnostics then
+              result.diagnostics = vim.tbl_filter(
+                function(d) return d.severity == vim.diagnostic.severity.ERROR end,
+                result.diagnostics
+              )
+            end
+            vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
+          end,
+        },
+      },
     },
   },
 }
