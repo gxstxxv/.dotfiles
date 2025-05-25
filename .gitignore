@@ -3,3 +3,5 @@
 .config/tmux/plugins/tmux-navigate/
 .config/tmux/plugins/minimal-tmux-status/
 .config/tmux/plugins/tmux-jump/
+.config/fish/extras/buf.fish
+.config/fish/extras/tmp.fish
