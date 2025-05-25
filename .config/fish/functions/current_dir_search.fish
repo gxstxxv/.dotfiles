@@ -2,9 +2,11 @@ function current_dir_search
     set dir $(pwd)
 
     if [ $dir = /Users/gg1 ]
-        set input $(fd --type d --exclude '.git' --exclude '.obsidian' --exclude '.idea' --exclude '.fingerprint' --hidden --full-path . ~/Desktop ~/Documents ~/Downloads | fzf --reverse --border --border-label "search" --info=hidden --prompt="" --pointer="-" --color=light --height=50% --bind "tab:down,shift-tab:up")
+        tmux popup -E "fish -c 'fd --type d --exclude '.git' --exclude '.obsidian' --exclude '.idea' --exclude '.fingerprint' --hidden --full-path . ~/Desktop ~/Documents ~/Downloads | fzf --ansi --info=hidden --bind \"J:down,K:up\" > $TMP_FISH'"
+        set input $(cat $TMP_FISH)
     else
-        set input $(fd --type d --exclude '.git' --exclude '.obsidian' --exclude '.idea' --exclude '.fingerprint' --hidden . | fzf --reverse --border --border-label "search" --info=hidden --prompt="" --pointer="-" --color=light --height=50% --bind "tab:down,shift-tab:up")
+        tmux popup -E "fish -c 'fd --type d --exclude '.git' --exclude '.obsidian' --exclude '.idea' --exclude '.fingerprint' --hidden . | fzf --ansi --info=hidden --bind \"J:down,K:up\" > $TMP_FISH'"
+        set input $(cat $TMP_FISH)
     end
 
     if [ -n "$input" ]

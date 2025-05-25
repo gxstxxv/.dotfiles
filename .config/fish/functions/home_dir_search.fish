@@ -1,5 +1,6 @@
 function home_dir_search
-    set input $(fd --type d --exclude '.git' --exclude '.idea' --exclude '.fingerprint' --full-path --hidden . ~/ | fzf --reverse --border --border-label "search" --info=hidden --prompt="" --pointer="-" --color=light --height=50% --bind "tab:down,shift-tab:up")
+    tmux popup -E "fish -c 'fd --type d --exclude '.git' --exclude '.idea' --exclude '.fingerprint' --full-path --hidden . ~/ | fzf --ansi --info=hidden --bind \"J:down,K:up\" > $TMP_FISH'"
+    set input $(cat $TMP_FISH)
     if [ -n "$input" ]
         cd $input
     end
