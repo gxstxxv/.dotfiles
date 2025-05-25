@@ -1,7 +1,7 @@
 start-at-login = true
 
-enable-normalization-flatten-containers = false
-enable-normalization-opposite-orientation-for-nested-containers = false
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
 
 on-focused-monitor-changed = ['move-mouse window-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center '] 
@@ -66,6 +66,16 @@ on-focus-changed = ['move-mouse window-lazy-center ']
     check-further-callbacks = true
     run = 'layout floating'
 
+[[on-window-detected]]
+    if.app-name-regex-substring = 'Supernote Partner'
+    check-further-callbacks = true
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-name-regex-substring = 'Python'
+    check-further-callbacks = true
+    run = 'layout floating'
+
 [workspace-to-monitor-force-assignment]
     8 = 'secondary'
     9 = 'secondary'
@@ -73,13 +83,6 @@ on-focus-changed = ['move-mouse window-lazy-center ']
     11 = 'secondary'
 
 [mode.main.binding]
-    alt-t = '''exec-and-forget open -na "kitty"'''
-    alt-c = '''exec-and-forget osascript -e '
-    tell application "Discord"
-        launch
-        activate
-    end tell'
-    '''
     alt-d = '''exec-and-forget osascript -e '
     tell application "Dictionary"
         launch
@@ -94,18 +97,6 @@ on-focus-changed = ['move-mouse window-lazy-center ']
     '''
     alt-m = '''exec-and-forget osascript -e '
     tell application "Stickies"
-        launch
-        activate
-    end tell'
-    '''
-    alt-g = '''exec-and-forget osascript -e '
-    tell application "GitHub Desktop"
-        launch
-        activate
-    end tell'
-    '''
-    alt-b = '''exec-and-forget osascript -e '
-    tell application "Orion"
         launch
         activate
     end tell'
@@ -154,7 +145,10 @@ on-focus-changed = ['move-mouse window-lazy-center ']
     ctrl-shift-c = 'reload-config'
 
     ctrl-r = 'mode resize'
-    alt-shift-semicolon = 'mode service'
+
+    alt-comma = 'layout tiles horizontal vertical'
+    alt-period = 'layout tiles horizontal horizontal'
+
 
 [mode.resize.binding]
     h = 'resize width -50'
