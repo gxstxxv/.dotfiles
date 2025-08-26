@@ -5,3 +5,6 @@
 .config/tmux/plugins/tmux-jump/
 .config/fish/extras/buf.fish
 .config/fish/extras/tmp.fish
+.config/fish/extras/tmp.fish.1
+.config/fish/extras/tmp.fish.2
+.config/fish/extras/tmp.fish.3
