@@ -5,6 +5,7 @@ return {
     opts = {
       ensure_installed = {
         "lua-language-server",
+        "fish-lsp",
         "stylua",
         "jdtls",
         "clangd",
@@ -22,6 +23,7 @@ return {
         "tinymist",
         "python-lsp-server",
         "mypy",
+        "debugpy",
         "typstyle",
         "dot-language-server",
       },
