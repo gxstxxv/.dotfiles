@@ -15,6 +15,10 @@ return {
 
           -- telescope files --
           ["<Leader><Leader>"] = { "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+          ["<Leader>N"] = {
+            "<cmd>lua require('telescope.builtin').find_files({ cwd = '~/Documents/Notes' })<cr>",
+            desc = "Find Notes",
+          },
 
           -- zen --
           ["<Leader>z"] = { "<cmd>ZenMode<cr>", desc = "Toggle Zenmode" },
@@ -65,9 +69,6 @@ return {
           ["gpD"] = { "<cmd>lua require('goto-preview').goto_preview_declaration()<CR>", desc = "Declaration" },
           ["gP"] = { "<cmd>lua require('goto-preview').close_all_win()<CR>", desc = "Close All" },
           ["gpr"] = { "<cmd>lua require('goto-preview').goto_preview_references()<CR>", desc = "References" },
-
-          -- floating notes --
-          ["<Leader>N"] = { "<cmd>Td<CR>", desc = "Floating Notes" },
         },
 
         v = {
