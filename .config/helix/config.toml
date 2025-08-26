@@ -13,12 +13,6 @@ insert = "bar"
 [editor.inline-diagnostics]
 cursor-line = "warning"
 
-[keys.normal]
-x = "select_line_below"
-X = "select_line_above"
-K = "hover"
-esc = ["collapse_selection", "keep_primary_selection"]
-
 [keys.normal.space]
 f = "file_picker_in_current_directory"
 F = "file_picker"
