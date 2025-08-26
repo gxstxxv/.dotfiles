@@ -37,6 +37,11 @@ on-focus-changed = ['move-mouse window-lazy-center ']
     run = 'layout floating'
 
 [[on-window-detected]]
+    if.window-title-regex-substring = 'Audio Devices'
+    check-further-callbacks = true
+    run = 'layout floating'
+
+[[on-window-detected]]
     if.app-name-regex-substring = 'Preview'
     check-further-callbacks = true
     run = 'layout floating'
